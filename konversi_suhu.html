@@ -1,27 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-  <title>Aplikasi Konversi Suhu</title>
-</head>
-<body>
-  <h1>Konversi Suhu</h1>
-<div id="converter">
-	<label for="degrees">Degrees</label>
-	<input type="number" id="degrees">
-	<label for="type">Skala Suhu</label>
-	<select id="type">
-		<option value="fahrenheit">Fahrenheit</option>
-		<option value="celsius">Celsius</option>
-		<option value="kelvin">Kelvin</option>
-		<option value="reamur">Reamur</option>
-	</select>
-	<button id="convert" onclick="convert()">Konversi</button>
-	<label id="resultlabel">Hasil:</h2>
-		<h2 id="result"></h2>
-</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <a href="index.html" class="text-decoration-none"
+      ><h1 class="h1 text-center text-primary mt-2">Konversi Suhu</h1></a
+    >
+    <div class="container mt-3">
+      <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="konversi_suhu.html"
+            >Konversi Suhu</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="informasi_rumus_suhu.html"
+            >Informasi Rumus</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="row w-50 mx-auto mt-5">
+        <div class="col">
+          <label for="nilaiAwal">Nilai</label>
+          <input
+            type="number"
+            class="form-control shadow-sm"
+            name="nilaiAwal"
+            id="nilaiAwal"
+          />
+        </div>
+        <div class="col">
+          <label class="text-start" for="skala">Skala Suhu</label>
+          <select
+            id="skala"
+            class="form-select shadow-sm"
+            aria-label="Default select example"
+            name="skala"
+          >
+            <option value="celcius">Celcius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="reamur">Reamur</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+        <div class="col justify-self-center align-self-end">
+          <button id="btn-konversi" class="btn btn-primary shadow-sm">
+            Konversi
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="w-50 mx-auto mt-5" id="result"></div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" />
+  </body>
 </html>
